@@ -6,12 +6,10 @@ div.row
 div.hero-unit
   div#meetings.carousel.slide
     div.carousel-inner
-      div.item.active
-        h1= title
-        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      div.item
-        h1 keep on rocking in the free world
-        p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.
+      each meeting in meetings
+        div.item.active
+          h1= meeting.name
+          != meeting.description
     p
       a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
       a.btn.btn-primary.btn-large.pull-right(href="#meetings", data-slide="next") Next &raquo;
