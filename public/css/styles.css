@@ -34,3 +34,7 @@
 .header-image:hover p {
 	opacity:1;
 }
+
+.carousel-caption {
+	position: relative;
+}	
