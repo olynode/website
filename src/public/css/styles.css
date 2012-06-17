@@ -1,0 +1,9 @@
+.detail-unit h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.item img {
+	display: block;
+	margin: auto;
+}
