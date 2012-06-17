@@ -1,0 +1,6 @@
+h1= meeting.name
+h2 at 
+  a(href="")= meeting.venue.name
+  |  on  
+  #{timeago(new Date(meeting.time))}
+!= meeting.description

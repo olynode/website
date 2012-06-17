@@ -8,8 +8,7 @@ div.hero-unit
     div.carousel-inner
       each meeting in meetings
         div.item.active
-          h1= meeting.name
-          != meeting.description
+          include includes/meeting
     p
       a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
       a.btn.btn-primary.btn-large.pull-right(href="#meetings", data-slide="next") Next &raquo;
