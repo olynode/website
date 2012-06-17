@@ -10,6 +10,8 @@ var app = module.exports = express.createServer();
 
 // Configuration
 
+app.helpers(require('./lib/helpers').helpers);
+
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');

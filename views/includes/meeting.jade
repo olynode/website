@@ -1,6 +1,6 @@
 h1= meeting.name
-h2 at 
-  a(href="")= meeting.venue.name
+h2 
+  a(href="#{googleMapLink(meeting.venue)}")= meeting.venue.name
   |  on  
-  #{timeago(new Date(meeting.time))}
+  #{futureDate(meeting.time)}
 != meeting.description
