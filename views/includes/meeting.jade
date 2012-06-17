@@ -4,3 +4,6 @@ h2
   |  on  
   #{futureDate(meeting.time)}
 != meeting.description
+h6= meeting.yes_rsvp_count
+  |  members have said they are coming 
+  a(href="#{meeting.event_url}") join us
