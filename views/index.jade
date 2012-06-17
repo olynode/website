@@ -9,9 +9,10 @@ div.hero-unit
       each meeting in meetings
         div.item.active
           include includes/meeting
-    p
-      a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
-      a.btn.btn-primary.btn-large.pull-right(href="#meetings", data-slide="next") Next &raquo;
+    if meetings.length > 1
+      p
+        a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
+        a.btn.btn-primary.btn-large.pull-right(href="#meetings", data-slide="next") Next &raquo;
 
 div.row.detail-unit
   div.span4
