@@ -1,4 +1,4 @@
-var meetup = require('../lib/meetup-api');
+var meetup = require('../lib/meetupApi');
 /*
  * GET home page.
  */

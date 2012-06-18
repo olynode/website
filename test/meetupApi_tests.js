@@ -1,4 +1,4 @@
-var meetup = require('../lib/meetup-api'),
+var meetup = require('../lib/meetupApi'),
 	should = require('should');
 	
 describe('meetup-api', function(){
