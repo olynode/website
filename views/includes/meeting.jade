@@ -2,7 +2,7 @@ h1= meeting.name
 h2 
   a(href="#{googleMapLink(meeting.venue)}")= meeting.venue.name
   |  on  
-  #{futureDate(meeting.time)}
+  #{prettyDate(meeting.time, meeting.utc_offset)}
 != meeting.description
 h6= meeting.yes_rsvp_count
   |  members have said they are coming 
