@@ -1,15 +1,24 @@
 {
-    "name": "olynode",
-    "description":"public website code for olynode.js"
-  , "version": "0.0.1"
-  , "engines":{
-      "node":"0.6.x",
-      "npm": "1.0.x"
-    }
-  , "private": true
-  , "dependencies": {
-      "express": "2.5.10"
-    , "jade": ">= 0.0.1"
-    , "should": ">=0.6.3"
+  "name": "olynode",
+  "description": "public website code for olynode.js",
+  "version": "0.0.1-5",
+  "engines": {
+    "node": "0.6.x",
+    "npm": "1.0.x"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "2.5.10",
+    "jade": ">= 0.0.1",
+    "should": ">=0.6.3",
+    "restler": ">=2.0.1",
+    "moment": ">=1.6.2"
+  },
+  "subdomain": "olynode",
+  "domains": [
+    "olynode.org"
+  ],
+  "scripts": {
+    "start": "app.js"
   }
 }
