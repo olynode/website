@@ -1,8 +1,8 @@
 div.row
   div.span12.header-image
-    img(src="/img/headers/spar/spar-1170.jpg")
+    img(src="#{headImage.url}")
     p.pull-right image by 
-      a(href="http://www.flickr.com/photos/21843970@N00/3430143494/") Patrick Donovan
+      a(href="#{headImage.srcUrl}") #{headImage.srcAuthor}
 div.hero-unit
   div#meetings.carousel.slide
     div.carousel-inner
