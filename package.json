@@ -1,7 +1,7 @@
 {
   "name": "olynode",
   "description": "public website code for olynode.js",
-  "version": "0.0.1-6",
+  "version": "0.0.1-7",
   "engines": {
     "node": "0.6.x",
     "npm": "1.0.x"
