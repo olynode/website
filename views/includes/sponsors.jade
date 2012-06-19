@@ -2,6 +2,12 @@ h2 Our Sponsors
 div#sponsors.carousel.slide
   div.carousel-inner
     div.item.active
+      a(href="http://nodejitsu.com")
+        img(src="/img/sponsors/nodejitsu.png", alt="Nodejitsu")
+      div.carousel-caption
+        h4 Nodejitsu
+        p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. 
+    div.item
       a(href="http://codesmart.com")
         img(src="/img/sponsors/codesmart.png", alt="CodeSmart")
       div.carousel-caption
@@ -13,3 +19,7 @@ div#sponsors.carousel.slide
       div.carousel-caption
         h4 TekPub
         p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+script
+    require(['bootstrap-carousel'], function(){
+      $('#sponsors').carousel({ interval: 4000 });
+    });
