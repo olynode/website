@@ -8,7 +8,7 @@ div.hero-unit
     div.carousel-inner
       each meeting in meetings
         div.item.active
-          include includes/meeting
+          include shared/meeting
     if meetings.length > 1
       p
         a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
@@ -16,11 +16,11 @@ div.hero-unit
 
 div.row.detail-unit
   div.span4
-    include includes/details 
+    include shared/widgets/details 
   div.span4
-    include includes/location
+    include shared/widgets/location
   div.span4
-    include includes/sponsors
+    include shared/widgets/sponsors
 
 hr
 footer
