@@ -1,9 +1,0 @@
-h1= meeting.name
-h2 
-  a(href="#{googleMapLink(meeting.venue)}")= meeting.venue.name
-  |  on  
-  #{prettyDate(meeting.time)}
-!= meeting.description
-h6= meeting.yes_rsvp_count
-  |  members have said they are coming 
-  a(href="#{meeting.event_url}") join us
