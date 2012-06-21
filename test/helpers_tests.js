@@ -12,9 +12,9 @@ describe('helpers', function(){
 	});
 
 	describe('pretty date', function(){
-		var input = { time: 1341279000000, utc_offset: -25200000 },
+		var time = 1341279000000,
 		    expected = 'Monday, July 2nd 2012 6:30:00 PM',
-		    actual = helpers.prettyDate(input.time, input.utc_offset);
+		    actual = helpers.prettyDate(time);
 
 		it('prints a pretty date in the correct time zone', function(){
 			expected.should.equal(actual);
