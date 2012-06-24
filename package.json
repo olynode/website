@@ -1,7 +1,7 @@
 {
   "name": "olynode",
   "description": "public website code for olynode.js",
-  "version": "0.0.1-11",
+  "version": "0.0.1-15",
   "engines": {
     "node": "0.6.x",
     "npm": "1.0.x"
@@ -24,6 +24,6 @@
     "cucumber": "latest",
     "mocha": "latest",
     "should": "latest",
-    "supervisor":"latest"
+    "supervisor": "latest"
   }
 }
