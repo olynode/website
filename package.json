@@ -10,7 +10,6 @@
   "dependencies": {
     "express": "2.5.10",
     "jade": ">= 0.0.1",
-    "should": ">=0.6.3",
     "restler": ">=2.0.1",
     "moment": ">=1.6.2"
   },
@@ -23,6 +22,8 @@
   },
   "devDependencies": {
     "cucumber": "latest",
+    "mocha": "latest",
+    "should": "latest",
     "supervisor":"latest"
   }
 }
