@@ -2,11 +2,11 @@
 html(lang="en")
   head
     title= title
-    include includes/metadata
-    include includes/styles
-    include includes/scripts
+    include shared/header/metadata
+    include shared/header/styles
+    include shared/header/scripts
   body
-    include includes/navigation
+    include shared/navigation
     div.container
       != body
-    include includes/forkme
+    include shared/widgets/forkme
