@@ -6,7 +6,11 @@ var headImage = require('../lib/headImage');
 
 exports.index = function(req, res){
   meetup.getMeetings(function(meetings){
-	  res.render('index', { title: 'Welcome to OlyNode', meetings: meetings, headImage: headImage.getImage() });
+	  res.render('index', { 
+	  	title: 'Welcome to OlyNode', 
+	  	meetings: meetings, 
+	  	headImage: headImage.getImage() 
+	  });
   });
 
 };
