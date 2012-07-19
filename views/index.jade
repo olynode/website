@@ -6,9 +6,13 @@ div.row
 div.hero-unit
   div#meetings.carousel.slide
     div.carousel-inner
-      each meeting in meetings
-        div.item.active
-          include shared/meeting
+      each meeting, index in meetings
+        if index === 0
+          div.item.active
+            include shared/meeting
+        else
+          div.item
+            include shared/meeting
     if meetings.length > 1
       p
         a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
