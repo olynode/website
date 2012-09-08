@@ -3,6 +3,6 @@
 });
 
 define('core',['jquery', 'bootstrap'], function($){ return $;});
-require(['core'], function(){
-	
+require(['core', 'bootstrap-carousel'], function(){
+    $('#meetings').carousel('pause');
 });
