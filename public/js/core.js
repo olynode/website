@@ -2,7 +2,7 @@
 	baseUrl: '/js/'
 });
 
-define('core',['jquery', 'bootstrap'], function($){ return $;});
-require(['core', 'bootstrap-carousel'], function(){
+define('core',['jquery', 'libs/bootstrap'], function($){ return $;});
+require(['core', 'libs/bootstrap-carousel'], function(){
     $('#meetings').carousel('pause');
 });
