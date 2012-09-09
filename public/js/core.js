@@ -1,8 +1,22 @@
 ﻿require.config({
-	baseUrl: '/js/'
+	baseUrl: '/js/',
+    paths:{
+        jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min',
+        'bootstrap': "libs/bootstrap.min",
+        'carousel': 'libs/bootstrap-carousel',
+        'facebook-sdk': 'http://connect.facebook.net/en_US/all'
+    },
+    shim:{
+        'bootstrap':{ deps:['jquery'], exports: 'jquery' },
+        'carousel':{ deps:['jquery', 'carousel'], exports: 'jquery' }
+    }
 });
 
-define('core',['jquery', 'libs/bootstrap'], function($){ return $;});
-require(['core', 'libs/bootstrap-carousel'], function(){
+require(['jquery','mods/facebook', 'bootstrap', 'carousel'], function($, facebook){
+
+    facebook.setup();
+
     $('#meetings').carousel('pause');
+    $('#sponsors').carousel();
+
 });
