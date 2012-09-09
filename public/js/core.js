@@ -8,7 +8,7 @@
     },
     shim:{
         'bootstrap':{ deps:['jquery'], exports: 'jquery' },
-        'carousel':{ deps:['jquery', 'carousel'], exports: 'jquery' }
+        'carousel':{ deps:['jquery', 'bootstrap'], exports: 'jquery' }
     }
 });
 
