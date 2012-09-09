@@ -13,11 +13,3 @@ exports.index = function(req, res){
 	  });
   });
 };
-
-exports.channel = function(req, res){
-    var oneYear = 60*60*24*365;
-    res.header('Pragma', 'public');
-    res.header('Cache-Control','max-age=' + oneYear);
-    res.header('Expires', new Date(Date.now() + oneYear).toUTCString());
-    res.send('<script src="//connect.facebook.net/en_US/all.js"></script>');
-};

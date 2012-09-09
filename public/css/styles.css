@@ -41,5 +41,11 @@
 }
 
 .fb-like {
-    margin-top: 15px;
+    float: left;
+    margin-top: 12px;
+    margin-right: 7px;
+}
+
+.fb-facepile {
+    float: left;
 }
