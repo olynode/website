@@ -12,9 +12,7 @@
     }
 });
 
-require(['jquery','mods/facebook', 'bootstrap', 'carousel'], function($, facebook){
-
-    facebook.setup();
+require(['jquery','mods/facebook', 'bootstrap', 'carousel', 'facebook-sdk'], function($){
 
     $('#meetings').carousel('pause');
     $('#sponsors').carousel();

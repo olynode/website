@@ -1,20 +1,18 @@
-define(['jquery','mods/configuration', 'facebook-sdk'], function($, config){
+define(['jquery','mods/configuration'], function($, config){
     var f = {};
 
     f.options = {
         appId: config.facebookAppId,
+        channelUrl: '//olynode.org/channel',
         cookie: true,
         status: true,
         xfbml: true,
-        oauth: true,
-        reloadIfSessionStateChanged: true
+        oauth: true
     };
 
-    f.setup = function(){
-        window.fbAsyncInit = function(){
-            window.FB.init(f.options);
-        };
+    window.fbAsyncInit = function(){
+        console.log('wtf');
+        FB.init(f.options);
+        FB.getLoginStatus();
     };
-
-    return f;
 });
