@@ -11,7 +11,9 @@
     "express": "2.5.10",
     "jade": ">= 0.0.1",
     "restler": ">=2.0.1",
-    "moment": ">=1.6.2"
+    "moment": ">=1.6.2",
+    "mongodb": "*",
+    "mongoskin": "*"
   },
   "subdomain": "olynode",
   "domains": [

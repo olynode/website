@@ -4,7 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+  , routes = require('./routes')
+  , mongo = require('mongoskin');
 
 var app = module.exports = express.createServer();
 
@@ -30,6 +31,25 @@ app.configure('production', function(){
 });
 
 // Routes
+if (process.env.MONGOLAB_URI) {
+  mongoUrl = process.env.MONGOLAB_URI; 
+}
+else {
+  mongoUrl = 'localhost';
+}
+mongoUrl += '/olynode';
+var db = mongo.db(mongoUrl);
+meetingDb = db.collection('meeting');
+meeting = {};
+meeting.slug = 'some-meeting';
+meetingDb.save(meeting, function(error, data) {
+  if (error) {
+    console.log('Mongo threw an error: ' + error);
+  }
+  else {
+    console.log('It saved!');
+  }
+});
 
 app.get('/', routes.index);
 
