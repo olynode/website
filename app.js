@@ -4,12 +4,10 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , mongo = require('mongoskin');
+  , routes = require('./routes');
 
 
 var port = process.env.PORT || 3000;
-var dbhost = process.env.MONGOLAB_URI || 'localhost/olynode';
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -34,20 +32,6 @@ app.configure('production', function(){
 });
 
 // Routes
-
-var db = mongo.db(dbhost);
-meetingDb = db.collection('meeting');
-meeting = {};
-meeting.slug = 'some-meeting';
-meetingDb.save(meeting, function(error, data) {
-  if (error) {
-    console.log('Mongo threw an error: ' + error);
-  }
-  else {
-    console.log('It saved!');
-  }
-});
-
 app.get('/', routes.index);
 
 
