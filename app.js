@@ -7,6 +7,9 @@ var express = require('express')
   , routes = require('./routes')
   , mongo = require('mongoskin');
 
+
+var port = process.env.PORT || 3000;
+var dbhost = process.env.MONGOLAB_URI || 'localhost/olynode';
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -31,15 +34,8 @@ app.configure('production', function(){
 });
 
 // Routes
-if (process.env.MONGOLAB_URI) {
-  mongoUrl = process.env.MONGOLAB_URI; 
-}
-else {
-  mongoUrl = 'localhost';
-  mongoUrl += '/olynode';
-}
-console.log(mongoUrl);
-var db = mongo.db(mongoUrl);
+
+var db = mongo.db(dbhost);
 meetingDb = db.collection('meeting');
 meeting = {};
 meeting.slug = 'some-meeting';
@@ -54,7 +50,6 @@ meetingDb.save(meeting, function(error, data) {
 
 app.get('/', routes.index);
 
-var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
