@@ -37,6 +37,7 @@ if (process.env.MONGOLAB_URI) {
 else {
   mongoUrl = 'localhost';
 }
+console.log(mongoUrl);
 mongoUrl += '/olynode';
 var db = mongo.db(mongoUrl);
 meetingDb = db.collection('meeting');
