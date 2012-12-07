@@ -11,8 +11,6 @@ meetup.getMeetings(function(meetings){
 				//update existing meeting
 		//else insert meeting
 	});
+	console.log('worker process ended');
+	process.exit(0);
 });
-
-console.log('worker process ended');
-process.exit(0);
-
