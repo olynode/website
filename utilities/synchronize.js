@@ -10,7 +10,7 @@ var onMeetings = function(meetings) {
 
 var onMeeting = function(meeting, done) {
 	database.saveMeeting(meeting, function(error, data){
-		console.log('saved: ' + data.id);
+		console.log('saved: ' + meeting.id);
 		done();
 	});
 };
@@ -23,8 +23,3 @@ var onComplete = function(){
 console.log('worker process started');
 
 meetup.getMeetings(onMeetings);
-
-//check if meeting.id exist in db
-			//check if meeting.updated date is newer
-				//update existing meeting
-		//else insert meeting
