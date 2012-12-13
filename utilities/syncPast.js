@@ -10,7 +10,7 @@ var onMeetings = function(meetings) {
 
 var onMeeting = function(meeting, done) {
 	database.saveMeeting(meeting, function(error, data){
-		console.log('saved: ' + meeting.id + ' - ' + meeting.name);
+		console.log('saved: ' + meeting.id + ' - ' +meeting.name);
 		done();
 	});
 };
@@ -22,4 +22,4 @@ var onComplete = function(){
 
 console.log('worker process started');
 
-meetup.getMeetings(onMeetings);
+meetup.getHistory(onMeetings);
