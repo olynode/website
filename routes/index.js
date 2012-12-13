@@ -1,15 +1,8 @@
-var database = require('../lib/database'),
-	headImage = require('../lib/headImage');
-/*
- * GET home page.
- */
+var home = require('./home');
+var pastMeetings = require('./pastMeetings');
 
-exports.index = function(req, res){
-  database.getMeetings(function(error, meetings){
-  	  res.render('index', { 
-	  	title: 'Welcome to OlyNode', 
-	  	meetings: meetings, 
-	  	headImage: headImage.getImage() 
-	  });
-  });
+
+module.exports = function(app) {
+	app.get('/', home.route);
+	app.get('/pastMeetings', pastMeetings.route);
 };
