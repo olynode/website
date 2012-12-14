@@ -1,4 +1,4 @@
- var meetup = require('../lib/meetupApi'),
+ var meetup = require('../lib/meetup'),
     database = require('../lib/database'),
     async = require('async');
 

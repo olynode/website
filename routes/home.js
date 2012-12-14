@@ -1,5 +1,5 @@
 var database = require('../lib/database'),
-	headImage = require('../lib/headImage');
+	images = require('../lib/images');
 /*
  * GET home page.
  */
@@ -9,7 +9,7 @@ exports.route = function(req, res){
   	  res.render('home', { 
 	  	title: 'Welcome to OlyNode', 
 	  	meetings: meetings, 
-	  	headImage: headImage.getImage() 
+	  	headerImage: images.getHeaderImage() 
 	  });
   });
 };

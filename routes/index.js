@@ -1,8 +1,8 @@
-var home = require('./home');
-var pastMeetings = require('./pastMeetings');
+var home = require('./home'),
+	meetings = require('./meetings');
 
 
 module.exports = function(app) {
 	app.get('/', home.route);
-	app.get('/pastMeetings', pastMeetings.route);
+	app.get('/history', meetings.route);
 };

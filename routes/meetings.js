@@ -1,15 +1,15 @@
 var database = require('../lib/database'),
-	headImage = require('../lib/headImage');
+	images = require('../lib/images');
 /*
  * GET past meetings
  */
 
 exports.route = function(req, res){
   database.getPastMeetings(function(error, meetings){
-  	  res.render('pastMeetings', { 
+  	  res.render('history', { 
 	  	title: 'Past Meeting with Olynode', 
 	  	meetings: meetings, 
-	  	headImage: headImage.getImage() 
+	  	headerImage: images.getHeaderImage() 
 	  });
   });
 };
