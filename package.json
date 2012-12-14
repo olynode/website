@@ -24,7 +24,6 @@
     "start": "app.js"
   },
   "devDependencies": {
-    "cucumber": "latest",
     "mocha": "latest",
     "should": "latest",
     "supervisor": "latest"
