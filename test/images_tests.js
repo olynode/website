@@ -1,16 +1,16 @@
-var headImage = require('../lib/headImage'),
+var images = require('../lib/images'),
     should = require('should');
 
-describe('headImage', function() {
+describe('images', function() {
   it('exists', function() {
-    should.exist(headImage);
+    should.exist(images);
   });
 
-  describe("getImage", function() {
+  describe("getHeaderImage", function() {
     var img;
 
     beforeEach(function() { 
-      img = headImage.getImage();
+      img = images.getHeaderImage();
     });
 
     it("gets an image", function() {
