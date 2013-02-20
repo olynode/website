@@ -13,9 +13,9 @@ div.hero-unit
         else
           div.item
             include shared/meeting
-    if meetings.length == 0
-      div.item
-        include shared/nomeeting
+      if meetings.length == 0
+        div.item.active
+          include shared/nomeeting
     if meetings.length > 1
       p
         a.btn.btn-primary.btn-large.pull-left(href="#meetings", data-slide="prev") &laquo; Last
