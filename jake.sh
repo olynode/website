@@ -1,0 +1,1 @@
+loose=true node_modules/.bin/jake $*

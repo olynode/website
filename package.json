@@ -14,6 +14,8 @@
     "moment": ">=1.6.2",
     "mongodb": "*",
     "mongoskin": "*",
+    "jake": "~0.5.8",
+    "jake-jshint": "0.0.4",
     "async": "*"
   },
   "subdomain": "olynode",
