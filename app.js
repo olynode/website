@@ -1,10 +1,7 @@
+'use strict';
 
-/**
- * Module dependencies.
- */
-
-var express = require('express')
-  , routes = require('./routes');
+var express = require('express'),
+    routes = require('./routes');
 
 
 var port = process.env.PORT || 3000;
@@ -20,7 +17,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
+  app.use(express['static'](__dirname + '/public'));
 });
 
 app.configure('development', function(){

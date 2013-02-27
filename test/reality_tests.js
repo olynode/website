@@ -1,10 +1,11 @@
-var should = require('should');
+/*globals it, describe */
+
+'use strict';
+
+var expect = require('expect.js');
 
 describe('Reality',function(){
-	it('should obey laws of nature', function(){
-		true.should.equal(true);
-	});
-	it('should exist', function(){
-		should.exist({'some':'foo'});
-	});
+    it('should obey laws of nature', function(){
+        expect(true).to.equal(true);
+    });
 });

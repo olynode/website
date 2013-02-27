@@ -1,4 +1,4 @@
---require should
+--require expect.js
 -R spec
 --ui bdd
 --growl

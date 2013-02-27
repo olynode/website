@@ -1,11 +1,14 @@
+'use strict';
+
  var meetup = require('../lib/meetup'),
     database = require('../lib/database'),
     async = require('async');
 
 
 
-var onMeetings = function(meetings) {
-	async.forEach(meetings, onMeeting, onComplete);
+var onComplete = function(){
+	console.log('worker process complete');
+	process.exit(0);
 };
 
 var onMeeting = function(meeting, done) {
@@ -15,9 +18,8 @@ var onMeeting = function(meeting, done) {
 	});
 };
 
-var onComplete = function(){
-	console.log('worker process complete');
-	process.exit(0);
+var onMeetings = function(meetings) {
+	async.forEach(meetings, onMeeting, onComplete);
 };
 
 console.log('worker process started');

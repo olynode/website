@@ -14,8 +14,6 @@
     "moment": ">=1.6.2",
     "mongodb": "*",
     "mongoskin": "*",
-    "jake": "~0.5.8",
-    "jake-jshint": "0.0.4",
     "async": "*"
   },
   "subdomain": "olynode",
@@ -26,8 +24,10 @@
     "start": "app.js"
   },
   "devDependencies": {
+    "jake": "~0.5.8",
+    "jake-jshint": "0.0.4",
     "mocha": "latest",
-    "should": "latest",
+    "expect.js": "~0.2.0",
     "supervisor": "latest"
   }
 }
