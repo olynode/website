@@ -1,3 +1,8 @@
+/*jshint node:false */
+/*globals require */
+
+'use strict';
+
 define(['jquery','mods/configuration'], function($, config){
     var f = {};
     f.setup = function(){

@@ -1,3 +1,8 @@
+/*jshint node:false */
+/*globals require */
+
+'use strict';
+
 define(['jquery'], function($){
     var c = {};
 

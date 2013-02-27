@@ -12,7 +12,7 @@
 		var files = new jake.FileList();
 		
 		files.include('**/*.js');
-		files.exclude('public');
+		files.exclude('lib');
 		files.exclude('node_modules');
 		
 		if(!lint.validateFileList(files.toArray(), options, {}))
